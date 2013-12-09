@@ -1,0 +1,94 @@
+@(appForm: Form[App])
+@import helper._
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Coming soon page">
+<meta name="author" content="Your name">
+<title>Home page of WisCom</title>
+<link href="@routes.Assets.at("stylesheets/bootstrap.css")" rel="stylesheet" type='text/css'>
+
+<link href="@routes.Assets.at("stylesheets/jqueryui.css")" rel="stylesheet" type='text/css'>
+<link href="@routes.Assets.at("stylesheets/font-awesome.css")" rel="stylesheet" type='text/css'>
+<link href="@routes.Assets.at("stylesheets/coming-soon.css")" rel="stylesheet" type='text/css'>
+
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="navbar-brand brand" href="@routes.Search.index()"><img src="@routes.Assets.at("images/logo.png")" width="80" height="30" /></a>
+				<div class="nav-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="@routes.Search.index()">Search</a></li>
+						<li><a href="@routes.Figure6.index()">Visualization</a></li>
+						<li><a href="@routes.Lasso.index()">Sentiment</a></li>
+						<li><a href="@routes.Topic.index()">Root Causes</a></li>
+						<li><a href="@routes.Top3.index()">Complaints</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container2" id="abc">
+		<div class="widget transparent lighting-border rounded-corner">
+			<h1 class="logo align-center">
+				<img src="@routes.Assets.at("images/logo.png")" width="400" height="100" />
+			</h1>
+			<h2 class="description">A multi-level system that analyzes user
+				reviews at various granularities: micro-level (comment-word
+				centric), meso-level (app centric), and macro-level (market 		                centric analysis).</h2>
+               
+			<div class="clearfix"></div>
+		</div>
+		@helper.form(action = routes.Figure6.submit(), 'class -> "form-group form-search subscribe-container", 'method -> "get") {
+			<div class="input-group @("has-error".when(appForm.hasErrors))">
+            
+				<input type="hidden" name="id" id="id" value="@appForm("id").value" required>
+				<input type="text" name="appName" id="appName" data-provide="typeahead" class="form-control input-lg" placeholder="App name" required>
+				<span class="input-group-btn">
+			        <button class="btn btn-success input-lg" type="submit" >Go!</button>
+			    </span>
+			
+            </div>
+			<span class="help-block">
+				@if(appForm.error("appName") != null) {
+					@appForm.error("appName").message
+                    
+				}
+			</span>
+		}
+ 
+		<!-- Modal -->
+		<div class="modal fade" id="myModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title">Alert</h4>
+		      </div>
+		      <div class="modal-body">
+		        Sorry, App: @appForm("appName").value @appForm("id").value  is not found in the database.
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="footer align-center">
+			<span class="copyright transparent lighting-border rounded-corner">
+				&copy; 2013 All rights reserved. </span>
+		</div>
+	</div>
+    
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   
+    <script src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/search.js")"></script>
+</body>
+</html>

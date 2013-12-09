@@ -1,0 +1,63 @@
+@(top3Data: List[String], top3: List[String])
+
+@main(Html("Top 3 complaints in categories"), nav = "top3") {
+    
+    <script type='text/javascript' > 
+	    var top3 = []
+        @for(top3Entry <- top3Data) {
+        	top3.push('@Html(top3Entry)');
+        }
+	</script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/top3.js")"></script>
+    <div>
+    	<h3>Game</h3>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-0" class="btn btn-primary change">@top3(0)</a>
+	    	<a id="btn-1" class="btn btn-default change">@top3(1)</a>
+	    	<a id="btn-2" class="btn btn-default change">@top3(2)</a>
+	    	<a id="btn-3" class="btn btn-default change">@top3(3)</a>
+	    	<a id="btn-4" class="btn btn-default change">@top3(4)</a>
+	    	<a id="btn-5" class="btn btn-default change">@top3(5)</a>
+		</div>
+    	<h3>Application</h3>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-6" class="btn btn-default change">@top3(6)</a>
+	    	<a id="btn-7" class="btn btn-default change">@top3(7)</a>
+	    	<a id="btn-8" class="btn btn-default change">@top3(8)</a>
+	    	<a id="btn-9" class="btn btn-default change">@top3(9)</a>
+	    	<a id="btn-10" class="btn btn-default change">@top3(10)</a>
+	    	<a id="btn-11" class="btn btn-default change">@top3(11)</a>
+		</div>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-12" class="btn btn-default change">@top3(12)</a>
+	    	<a id="btn-13" class="btn btn-default change">@top3(13)</a>
+	    	<a id="btn-14" class="btn btn-default change">@top3(14)</a>
+	    	<a id="btn-15" class="btn btn-default change">@top3(15)</a>
+	    	<a id="btn-16" class="btn btn-default change">@top3(16)</a>
+	    	<a id="btn-17" class="btn btn-default change">@top3(17)</a>
+		</div>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-18" class="btn btn-default change">@top3(18)</a>
+	    	<a id="btn-19" class="btn btn-default change">@top3(19)</a>
+	    	<a id="btn-20" class="btn btn-default change">@top3(20)</a>
+	    	<a id="btn-21" class="btn btn-default change">@top3(21)</a>
+	    	<a id="btn-22" class="btn btn-default change">@top3(22)</a>
+	    	<a id="btn-23" class="btn btn-default change">@top3(23)</a>
+		</div>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-24" class="btn btn-default change">@top3(24)</a>
+	    	<a id="btn-25" class="btn btn-default change">@top3(25)</a>
+	    	<a id="btn-26" class="btn btn-default change">@top3(26)</a>
+	    	<a id="btn-27" class="btn btn-default change">@top3(27)</a>
+	    	<a id="btn-28" class="btn btn-default change">@top3(28)</a>
+	    	<a id="btn-29" class="btn btn-default change">@top3(29)</a>
+		</div>
+	</div>
+	<p></p>
+    <div>
+    	<div class="center_col">
+    		<div id="pie_div"></div>
+    	</div>
+    </div>
+    
+}

@@ -1,0 +1,38 @@
+@(topic: List[String])
+
+@main(Html("Words in root causes"), nav = "topic") {
+    
+    <script type='text/javascript' > 
+	    var topic = []
+        @for(topicEntry <- topic) {
+        	topic.push('@Html(topicEntry)');
+        }
+	</script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/topic.js")"></script>
+    <div>
+	    <div class="btn-group btn-group-justified">
+	    	<a id="btn-0" class="btn btn-primary change">Cost</a>
+	    	<a id="btn-1" class="btn btn-default change">Picture</a>
+	    	<a id="btn-2" class="btn btn-default change">Telephony</a>
+	    	<a id="btn-3" class="btn btn-default change">Connectivity</a>
+	    	<a id="btn-4" class="btn btn-default change">Compatibility</a>
+		</div>
+		<div class="btn-group btn-group-justified">
+	    	<a id="btn-5" class="btn btn-default change">Attractiveness</a>
+	    	<a id="btn-6" class="btn btn-default change">Media</a>
+	    	<a id="btn-7" class="btn btn-default change">Stability</a>
+	    	<a id="btn-8" class="btn btn-default change">Accuracy</a>
+	    	<a id="btn-9" class="btn btn-default change">Spam</a>
+		</div>
+	</div>
+	<p></p>
+    <div>
+    	<div class="left_col">
+    		<div id="pie_div"></div>
+    	</div>
+    	<div class="right_col">
+    		<div id="table_div"></div>
+    	</div>
+    </div>
+    
+}

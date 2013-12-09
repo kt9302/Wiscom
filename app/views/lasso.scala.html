@@ -1,0 +1,13 @@
+@(lasso: String)
+
+@main(Html("Sentiment of words"), nav = "lasso") {
+    
+    <script type='text/javascript' > 
+  		var lasso = "@lasso"; 
+	</script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/lasso.js")"></script>
+    <p>
+        <div id="lasso_div"></div>
+    </p>
+    
+}

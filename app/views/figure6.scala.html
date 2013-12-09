@@ -1,0 +1,19 @@
+@(figure6: String, figure6Pie: String, appName: String)
+
+@main(Html(appName), nav = "visualization") {
+    
+    <script type='text/javascript' > 
+  		var figure6 = "@figure6"; 
+  		var figure6Pie = "@figure6Pie";
+	</script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/figure6.js")"></script>
+    <p>
+        <div id="chart_div" class="center_col"></div>
+        <div id="dashboard">  
+		  <div id="control"><!-- Controls renders here --></div>  
+		  <div id="chartInterval"><!-- Line chart renders here --></div>  
+		</div>
+    	<div id="pie_div" class="center_col"></div>
+    </p>
+    
+}

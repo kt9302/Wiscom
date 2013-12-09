@@ -1,0 +1,75 @@
+@(title: Html, nav: String = "")(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WisCom</title>
+
+		<link href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")" rel="stylesheet" type='text/css'>
+		<link href="@routes.Assets.at("stylesheets/bootstrap.min.css")" rel="stylesheet" type='text/css'>
+		<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
+		<link href="@routes.Assets.at("stylesheets/font-awesome.css")" rel="stylesheet" type='text/css'>
+		<link href="@routes.Assets.at("stylesheets/coming-soon.css")" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+    	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    </head>
+        
+    <body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="navbar-brand brand" href="@routes.Search.index()"><img src="@routes.Assets.at("images/logo.png")" width="80" height="30" /></a>
+					<div class="nav-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="@("active".when(nav == "search"))">
+                            	<a href="@routes.Search.index()">Search</a>
+                        	</li>
+                        	<li class="@("active".when(nav == "visualization"))">
+                            	<a href="@routes.Figure6.index()">Visualization</a>
+                        	</li>
+                        	<li class="@("active".when(nav == "lasso"))">
+                            	<a href="@routes.Lasso.index()">Sentiment</a>
+                        	</li>
+                        	<li class="@("active".when(nav == "topic"))">
+                            	<a href="@routes.Topic.index()">Root Causes</a>
+                        	</li>
+                        	<li class="@("active".when(nav == "top3"))">
+                            	<a href="@routes.Top3.index()">Complaints</a>
+                        	</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="container">
+
+            <div class="content">
+                
+                <div class="page-header">
+                    <h1>@title</h1>
+                </div>
+
+                <div class="row">
+                        @content
+                </div>
+                
+            </div>
+
+            <footer>
+                <div class="footer align-center">
+					<span class="copyright">
+						&copy; 2013 All rights reserved. 
+					</span>
+				</div>
+            </footer>
+
+        </div>
+        
+    </body>
+</html>
