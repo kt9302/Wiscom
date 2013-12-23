@@ -1,8 +1,13 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import com.fasterxml.jackson.databind.node.*;
+
 
 import play.*;
+import play.libs.Json;
 import play.mvc.*;
 import play.data.*;
 import static play.data.Form.*;
@@ -51,5 +56,11 @@ public class Figure6 extends Controller {
     	} else {
         	return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, figure6Model.appName, figure6Model.appid));
     	}
+    }
+    
+    public static Result ajax(String term) {
+        ObjectNode jsonResult = Json.newObject();
+        jsonResult.put("term", term);
+        return ok(jsonResult);
     }
 }
