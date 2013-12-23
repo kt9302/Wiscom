@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20131223102802"/>
+		date="20131124175803"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-jpa_2.10">
 			<revision name="2.2.0" status="release" pubdate="20130926233817" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="60">
