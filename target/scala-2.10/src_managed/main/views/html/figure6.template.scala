@@ -20,22 +20,25 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object figure6 extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template3[String,String,String,play.api.templates.HtmlFormat.Appendable] {
+object figure6 extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template4[String,String,String,String,play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(figure6: String, figure6Pie: String, appName: String):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(figure6: String, figure6Pie: String, appName: String,appId: String):play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.56*/("""
+Seq[Any](format.raw/*1.70*/("""
 
 """),_display_(Seq[Any](/*3.2*/main(Html(appName), nav = "visualization")/*3.44*/ {_display_(Seq[Any](format.raw/*3.46*/("""
     
     <script type='text/javascript' > 
   		var figure6 = """"),_display_(Seq[Any](/*6.21*/figure6)),format.raw/*6.28*/(""""; 
   		var figure6Pie = """"),_display_(Seq[Any](/*7.24*/figure6Pie)),format.raw/*7.34*/("""";
+		var appName=""""),_display_(Seq[Any](/*8.17*/appName)),format.raw/*8.24*/("""";
+		var appId=""""),_display_(Seq[Any](/*9.15*/appId)),format.raw/*9.20*/("""";		
 	</script>
-    <script type="text/javascript" src=""""),_display_(Seq[Any](/*9.42*/routes/*9.48*/.Assets.at("javascripts/figure6.js"))),format.raw/*9.84*/(""""></script>
+    <script type="text/javascript" src=""""),_display_(Seq[Any](/*11.42*/routes/*11.48*/.Assets.at("javascripts/figure6.js"))),format.raw/*11.84*/(""""></script>
     <p>
+    	
         <div id="chart_div" class="center_col"></div>
         <div id="dashboard">  
 		  <div id="control"><!-- Controls renders here --></div>  
@@ -43,24 +46,42 @@ Seq[Any](format.raw/*1.56*/("""
 		</div>
     	<div id="pie_div" class="center_col"></div>
     </p>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body" >
+      <div id="modal-body" class="center_col"></div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
     
 """)))})))}
     }
     
-    def render(figure6:String,figure6Pie:String,appName:String): play.api.templates.HtmlFormat.Appendable = apply(figure6,figure6Pie,appName)
+    def render(figure6:String,figure6Pie:String,appName:String,appId:String): play.api.templates.HtmlFormat.Appendable = apply(figure6,figure6Pie,appName,appId)
     
-    def f:((String,String,String) => play.api.templates.HtmlFormat.Appendable) = (figure6,figure6Pie,appName) => apply(figure6,figure6Pie,appName)
+    def f:((String,String,String,String) => play.api.templates.HtmlFormat.Appendable) = (figure6,figure6Pie,appName,appId) => apply(figure6,figure6Pie,appName,appId)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Dec 23 10:42:35 PST 2013
+                    DATE: Mon Dec 23 10:46:27 PST 2013
                     SOURCE: /Users/kt9302/Desktop/Wiscom/app/views/figure6.scala.html
-                    HASH: 4c7ad005b0bc76f4539c983fa9cba452d8203c54
-                    MATRIX: 790->1|938->55|975->58|1025->100|1064->102|1163->166|1191->173|1253->200|1284->210|1374->265|1388->271|1445->307
-                    LINES: 26->1|29->1|31->3|31->3|31->3|34->6|34->6|35->7|35->7|37->9|37->9|37->9
+                    HASH: 91632ed5ce9676737a1308543c31e9bcc0ab309b
+                    MATRIX: 797->1|959->69|996->72|1046->114|1085->116|1184->180|1212->187|1274->214|1305->224|1359->243|1387->250|1439->267|1465->272|1558->329|1573->335|1631->371
+                    LINES: 26->1|29->1|31->3|31->3|31->3|34->6|34->6|35->7|35->7|36->8|36->8|37->9|37->9|39->11|39->11|39->11
                     -- GENERATED --
                 */
             

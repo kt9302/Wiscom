@@ -11,8 +11,8 @@ GET		/search/ajax		controllers.Search.ajax(term:String)
 
 # Figure 6
 GET		/figure6					controllers.Figure6.index()
+GET		/figure6/ajax		controllers.Search.ajax(term:String)
 GET		/figure6:id					controllers.Figure6.app(id:Int)
-POST	/figure6					controllers.Figure6.submit()
 
 # Lasso
 GET		/lasso						controllers.Lasso.index()
