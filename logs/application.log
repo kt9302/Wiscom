@@ -1,9 +1,21 @@
-2013-12-23 12:17:08,485 - [INFO] - from play in pool-4-thread-4 
+2013-12-23 12:20:05,380 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2013-12-23 12:17:11,884 - [WARN] - from play in play-internal-execution-context-1 
+2013-12-23 12:20:13,211 - [WARN] - from play in play-internal-execution-context-1 
 Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
 
-2013-12-23 12:17:12,086 - [INFO] - from play in play-internal-execution-context-1 
+2013-12-23 12:20:13,417 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-12-23 12:22:51,379 - [WARN] - from play in play-internal-execution-context-1 
+Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
+
+2013-12-23 12:22:51,415 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-12-23 12:23:22,354 - [WARN] - from play in play-internal-execution-context-1 
+Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
+
+2013-12-23 12:23:22,391 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
