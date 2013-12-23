@@ -2,7 +2,7 @@
   google.setOnLoadCallback(drawChart);
 
   var optionsInterval = {
-	  title: 'App Reviews',
+	  title: 'Aps',
       animation: {
         duration: 1000,
         easing: 'in'
@@ -20,7 +20,7 @@
     view.hideColumns([3,4,5]);
 
     var options = {
-      title: 'App Reviews',
+      title: 'App ',
       focusTarget: 'category'
     };
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -90,7 +90,7 @@
 	    var pieData = new google.visualization.DataTable(e);
 	    var pieView = new google.visualization.DataView(pieData);
 	    pieView.setColumns([0,col]);
-	    console.log(e);
+	    //console.log(e);
 	    var pieOptions = {
 	      title: 'Category Weights',
 	      sliceVisibilityThreshold: 1/3600,

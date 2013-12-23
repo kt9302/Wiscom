@@ -21,10 +21,7 @@ public class Figure6 extends Controller {
 	public final static AppModel appModel = new AppModel();
   
     public static Result index() throws IOException {
-//    	Figure6Model figure6Model = new Figure6Model("test");
-//    	System.out.println("index called.");
-//        return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, "test"));
-    	return app(130211);
+    	return app(130210);
     }
     
     /**
