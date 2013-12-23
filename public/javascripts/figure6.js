@@ -45,12 +45,13 @@
 	 			google.visualization.events.removeAllListeners(chart);
 	  			google.visualization.events.addListener(chart, 'select', selectHandler2);
 				document.getElementById('myModalLabel').innerHTML="Topic for reviews on App: "+appName+" from "+toreturn[1]+" to "+toreturn[2]; 
-				
 				$('#myModal').modal('show');
 				
 	  	}
 		
 	}
+	
+  	
     drawPieChart(1);
     
     
