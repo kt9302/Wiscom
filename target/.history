@@ -117,3 +117,5 @@ clean
 run
 RUN
 run
+clean
+run
