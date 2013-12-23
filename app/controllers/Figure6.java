@@ -30,7 +30,7 @@ public class Figure6 extends Controller {
      */ 
     public static Result app(int id) throws IOException {
     	Figure6Model figure6Model = new Figure6Model(id);
-    	return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, figure6Model.appName));
+    	return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, figure6Model.appName,figure6Model.appid));
     }
   
     public static Result submit() throws IOException {
@@ -49,7 +49,7 @@ public class Figure6 extends Controller {
     		appForm.reject("appName", figure6Model.dataString);
     		return badRequest(search.render(appForm));
     	} else {
-        	return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, figure6Model.appName));
+        	return ok(figure6.render(figure6Model.dataString, figure6Model.pieString, figure6Model.appName, figure6Model.appid));
     	}
     }
 }

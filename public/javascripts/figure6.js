@@ -20,11 +20,38 @@
     view.hideColumns([3,4,5]);
 
     var options = {
-      title: 'App ',
-      focusTarget: 'category'
+      title: 'App Reviews',
+      focusTarget: 'category',
+      vAxis: {title: 'Number of Reviews', titleTextStyle: {color: 'green'}},
+      hAxis: {logScale:false, title:'Time since released', titleTextStyle: {color: 'green'}}
     };
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(view, options);
+	google.visualization.events.addListener(chart, 'select', selectHandler2);
+	var toreturn=new Array();
+	toreturn[0]=parseInt(appId);
+	function selectHandler2() {
+			toreturn[1]=chart.getSelection()[0].row+1;
+			google.visualization.events.removeAllListeners(chart);
+	  		var b=google.visualization.events.addListener(chart, 'select', selectHandler3);
+	  		function selectHandler3() {
+				if (chart.getSelection()[0].row+1<toreturn[1]){
+					toreturn[2]=toreturn[1];
+					toreturn[1]=chart.getSelection()[0].row+1;
+					}
+				else {
+					toreturn[2]=chart.getSelection()[0].row+1;
+					}
+	 			google.visualization.events.removeAllListeners(chart);
+	  			google.visualization.events.addListener(chart, 'select', selectHandler2);
+				document.getElementById('myModalLabel').innerHTML="Topic for reviews on App: "+appName+" from "+toreturn[1]+" to "+toreturn[2]; 
+				$('#myModal').modal('show');
+				
+	  	}
+		
+	}
+	
+  	
     drawPieChart(1);
     
     
@@ -95,6 +122,8 @@
 	      title: 'Category Weights',
 	      sliceVisibilityThreshold: 1/3600,
 	    };
-	    var pieChart = new google.visualization.PieChart(document.getElementById('pie_div'));
-	    pieChart.draw(pieView, pieOptions);
+	    var pieChart1 = new google.visualization.PieChart(document.getElementById('pie_div'));
+		var pieChart2 = new google.visualization.PieChart(document.getElementById('modal-body'));
+	    pieChart1.draw(pieView, pieOptions);
+		pieChart2.draw(pieView, pieOptions);
   }

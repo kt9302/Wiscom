@@ -26,6 +26,7 @@ public class Figure6Model {
 	private DataTable data = new DataTable(), pieChartData = new DataTable();
 	public String dataString = "", pieString = "";
 	public String appName = "";
+    public String appid;
 	public final static String[] categories = {"Attractiveness", "Stability", "Accuracy", "Compatibility",
 		"Connectivity", "Cost", "Telephony", "Picture", "Media", "Spam"};
 	
@@ -133,6 +134,7 @@ public class Figure6Model {
 	public Figure6Model(int id, String appName) throws IOException {
 		this.appName = appName;
 		int counter = 1;
+        this.appid=Integer.toString(id);
     	String strLine = "";
     	
     	if (id <= 0) {

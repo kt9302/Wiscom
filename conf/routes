@@ -7,7 +7,7 @@ GET     /                           controllers.Search.index()
 GET     /application                controllers.Application.index()
 
 # Search
-GET		/search/ajax				controllers.Search.ajax(term:String)
+GET		/search/ajax		controllers.Search.ajax(term:String)
 
 # Figure 6
 GET		/figure6					controllers.Figure6.index()

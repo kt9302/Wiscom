@@ -1,6 +1,6 @@
-// @SOURCE:/Users/kt9302/Desktop/Research/Wis Com/conf/routes
-// @HASH:6edcf84b7bc14481b1d5477a787720a102037097
-// @DATE:Sun Nov 24 17:58:52 PST 2013
+// @SOURCE:/Users/kt9302/Desktop/Research/w1/conf/routes
+// @HASH:a34e516d094fdbc4698c9b250ca0662ebe2d6684
+// @DATE:Tue Nov 26 12:13:15 PST 2013
 
 
 import play.core._
