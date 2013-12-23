@@ -1,24 +1,12 @@
-2013-12-23 11:46:02,538 - [INFO] - from play in pool-4-thread-3 
+2013-12-23 11:59:12,328 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2013-12-23 11:46:10,486 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:46:10,692 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2013-12-23 11:46:36,585 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:46:36,624 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2013-12-23 11:47:41,071 - [ERROR] - from application in New I/O worker #1 
+2013-12-23 12:00:04,890 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6gkf09o8g - Internal server error, for (GET) [/figure6/ajax?term=1] ->
+! @6gkf206h1 - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: reached end of file while parsing]
+play.PlayExceptions$CompilationException: Compilation error[value submit is not a member of controllers.ReverseFigure6]
 	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
@@ -39,12 +27,15 @@ play.PlayExceptions$CompilationException: Compilation error[error: reached end o
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
 
-2013-12-23 11:49:10,027 - [ERROR] - from application in New I/O worker #1 
+2013-12-23 12:00:04,938 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2013-12-23 12:00:34,845 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6gkf0epo7 - Internal server error, for (GET) [/figure6/ajax?term=1] ->
+! @6gkf21opa - Internal server error, for (GET) [/] ->
 
-play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+play.PlayExceptions$CompilationException: Compilation error[value submit is not a member of controllers.ReverseFigure6]
 	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
@@ -64,28 +55,4 @@ play.PlayExceptions$CompilationException: Compilation error[error: cannot find s
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2013-12-23 11:50:08,755 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:50:08,786 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2013-12-23 11:51:35,977 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:51:36,000 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2013-12-23 11:52:31,841 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:52:31,855 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2013-12-23 11:53:28,943 - [WARN] - from play in play-internal-execution-context-1 
-Plugin [org.cloudfoundry.reconfiguration.play.JPAPlugin] is disabled
-
-2013-12-23 11:53:28,954 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
 

@@ -59,9 +59,5 @@ public class Figure6 extends Controller {
     	}
     }
     
-    public static Result ajax(String term) {
-        ObjectNode jsonResult = Json.newObject();
-        jsonResult.put("term",term);
-        return ok(jsonResult);
-    }
+    
 }
