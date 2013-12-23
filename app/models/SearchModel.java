@@ -54,7 +54,7 @@ public class SearchModel {
             String s2="";
             
             for (int i=0;i<s1.length();i++){
-                if (Character.isLetterOrDigit(s1.charAt(i)) ||(s1.charAt(i)==' ')) s2 +=s1.substring(i,i+1);}
+                if (Character.isLetterOrDigit(s1.charAt(i)) || s1.charAt(i)==' ') s2 +=s1.substring(i,i+1);}
 			if ((s1.toLowerCase().indexOf(searchName) > -1)||(s2.toLowerCase().indexOf(searchName) > -1)) {
 				result.add(s1);
 			}
