@@ -50,7 +50,7 @@ Seq[Any](format.raw/*1.17*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Dec 23 12:25:19 PST 2013
+                    DATE: Sat Jan 25 22:58:53 PST 2014
                     SOURCE: /Users/kt9302/Desktop/Wiscom/app/views/lasso.scala.html
                     HASH: 2d737c68969ab0cba3da9f67d94043982076741e
                     MATRIX: 774->1|883->16|922->21|977->68|1016->70|1116->135|1142->140|1235->198|1249->204|1304->238

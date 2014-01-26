@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for wiscom#wiscom_2.10;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies wiscom#wiscom_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5e6f5adc[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@177cf3cc[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	activator-local: revision in cache: org.scala-lang#scala-library;2.10.2[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.2 in sbt-chain[0m
@@ -585,7 +585,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies wiscom#wiscom_2.10;1.0->com.typesafe.play#play_2.10;2.2.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies wiscom#wiscom_2.10;1.0->com.typesafe.play#play-java_2.10;2.2.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java_2.10;2.2.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1f85b0b6[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@65951713[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java_2.10;2.2.0[0m
 [0m[[0mdebug[0m] [0m	activator-local: revision in cache: com.typesafe.play#play-java_2.10;2.2.0[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java_2.10;2.2.0 in sbt-chain[0m
@@ -5735,7 +5735,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1433ms :: artifacts dl 65ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3459ms :: artifacts dl 82ms[0m
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 compile produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 runtime produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 test produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-test.xml[0m
@@ -5749,5 +5749,5 @@
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 docs produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 pom produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for wiscom#wiscom_2.10;1.0 scala-tool produced in /Users/kt9302/Desktop/Wiscom/target/resolution-cache/reports/wiscom-wiscom_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1433ms resolve - 65ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3459ms resolve - 82ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

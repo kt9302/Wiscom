@@ -60,7 +60,7 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main(Html("Form samples"))/*1.28*/ {_display_
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Dec 23 12:25:19 PST 2013
+                    DATE: Sat Jan 25 22:58:53 PST 2014
                     SOURCE: /Users/kt9302/Desktop/Wiscom/app/views/index.scala.html
                     HASH: ea860f52ea2ba1f712ecf397563d4df5d7f048d6
                     MATRIX: 864->1|898->27|937->29|1116->172|1131->178|1166->191|1413->402|1428->408|1465->423

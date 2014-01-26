@@ -1,6 +1,6 @@
 // @SOURCE:/Users/kt9302/Desktop/Wiscom/conf/routes
-// @HASH:57f0f7c1880af3e8dde1e11c80869a204630e8af
-// @DATE:Mon Dec 23 12:25:39 PST 2013
+// @HASH:964eac86522e8a16203d9c4479081502ecff37d6
+// @DATE:Sat Jan 25 22:58:53 PST 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -27,6 +27,7 @@ import Router.queryString
 // @LINE:20
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:10
 // @LINE:7
@@ -101,13 +102,20 @@ def index(): Call = {
 
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 class ReverseFigure6 {
     
 
 // @LINE:13
-def abc(term:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "figure6/abc" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("term", term)))))
+def recalculate(id:Int, lb:Int, ub:Int): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "figure6/recalculate" + queryString(List(Some(implicitly[QueryStringBindable[Int]].unbind("id", id)), Some(implicitly[QueryStringBindable[Int]].unbind("lb", lb)), Some(implicitly[QueryStringBindable[Int]].unbind("ub", ub)))))
+}
+                                                
+
+// @LINE:14
+def index(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "figure6")
 }
                                                 
 
@@ -236,6 +244,7 @@ def submit(step:Int): Call = {
 // @LINE:20
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:10
 // @LINE:7
@@ -340,16 +349,28 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 class ReverseFigure6 {
     
 
 // @LINE:13
-def abc : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Figure6.abc",
+def recalculate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Figure6.recalculate",
    """
-      function(term) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "figure6/abc" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("term", term)])})
+      function(id,lb,ub) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "figure6/recalculate" + _qS([(""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("id", id), (""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("lb", lb), (""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("ub", ub)])})
+      }
+   """
+)
+                        
+
+// @LINE:14
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Figure6.index",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "figure6"})
       }
    """
 )
@@ -535,6 +556,7 @@ def submit : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:20
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 // @LINE:10
 // @LINE:7
@@ -610,13 +632,20 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:17
 // @LINE:15
+// @LINE:14
 // @LINE:13
 class ReverseFigure6 {
     
 
 // @LINE:13
-def abc(term:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Figure6.abc(term), HandlerDef(this, "controllers.Figure6", "abc", Seq(classOf[String]), "GET", """ Figure 6""", _prefix + """figure6/abc""")
+def recalculate(id:Int, lb:Int, ub:Int): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Figure6.recalculate(id, lb, ub), HandlerDef(this, "controllers.Figure6", "recalculate", Seq(classOf[Int], classOf[Int], classOf[Int]), "GET", """ Figure 6""", _prefix + """figure6/recalculate""")
+)
+                      
+
+// @LINE:14
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Figure6.index(), HandlerDef(this, "controllers.Figure6", "index", Seq(), "GET", """""", _prefix + """figure6""")
 )
                       
 
